@@ -7,7 +7,7 @@ const refreshNum = () => {
 
 <template>
     <div>
-        <p>Number: <span>{{ num }}</span></p>
+        <p class="text-red-700">Number: <span>{{ num }}</span></p>
         <button @click="refreshNum">
             refresh
         </button>
