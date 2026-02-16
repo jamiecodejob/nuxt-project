@@ -1,5 +1,8 @@
 <template>
-    <div>
+    <!-- <div>
         <AppNumber />
-    </div>
+    </div> -->
+    <NuxtLayout>
+        <NuxtPage />
+   </NuxtLayout> 
 </template>
