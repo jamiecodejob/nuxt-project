@@ -1,11 +1,11 @@
 <script lang="ts">
 definePageMeta({
-    layout: "login",
+    layout: "about",
 });
 </script>
 <template>
     <div>
-        <h1>login layout</h1>
+        <h1>about layout</h1>
         <slot />
     </div>
 </template>

@@ -1,11 +1,11 @@
 <script setup lang="ts">
 definePageMeta({
-    layout: "login",
+    layout: "about",
 });
 </script>
 <template>
     <div>
-        login paged
+        about paged
     </div>
 </template>
 <style scoped>
