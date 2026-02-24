@@ -12,9 +12,7 @@ if (error.value) {
 }
 </script>
 <template>
-  <NuxtErrorBoundary>
-    <pre class="text-xs">{{ data }}</pre>
-    <div class="flex flex-col max-w-screen-lg container py-20">
+  <div class="flex flex-col max-w-screen-lg container py-20">
     <!-- Header -->
     <div class="flex flex-col mb-6">
       <h2 class="text-5xl mb-4 font-semibold">{{ data?.name }}</h2>
@@ -76,8 +74,7 @@ if (error.value) {
         </li>
       </ul>
     </div>
-    </div>
-  </NuxtErrorBoundary>
+  </div>
 </template>
 <style scoped>
 
