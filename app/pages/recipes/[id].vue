@@ -1,10 +1,20 @@
 <script setup lang="ts">
 import { type Recipe } from "../../../types/types";
 const {id} = useRoute().params;
-const {data, error} = await useFetch<Recipe>(`https://dummyjson.com/recipes/${id}`);
+const { data, error } = await useFetch<Recipe>(`https://dummyjson.com/recipes/${id}`
+);
+// 2. 處理 API 成功 (200) 但回傳空值的情況
+if (error.value) {
+  throw createError({
+    statusCode: error.value?.statusCode,
+    statusMessage: error.value?.statusMessage,
+  });
+}
 </script>
 <template>
-  <div class="flex flex-col max-w-screen-lg container py-20">
+  <NuxtErrorBoundary>
+    <pre class="text-xs">{{ data }}</pre>
+    <div class="flex flex-col max-w-screen-lg container py-20">
     <!-- Header -->
     <div class="flex flex-col mb-6">
       <h2 class="text-5xl mb-4 font-semibold">{{ data?.name }}</h2>
@@ -66,7 +76,8 @@ const {data, error} = await useFetch<Recipe>(`https://dummyjson.com/recipes/${id
         </li>
       </ul>
     </div>
-  </div>
+    </div>
+  </NuxtErrorBoundary>
 </template>
 <style scoped>
 
