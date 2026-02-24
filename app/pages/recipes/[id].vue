@@ -10,7 +10,7 @@ const {data, error} = await useFetch<Recipe>(`https://dummyjson.com/recipes/${id
       <h2 class="text-5xl mb-4 font-semibold">{{ data?.name }}</h2>
       <div class="flex gap-4 text-xl mb-6">
         <div class="flex items-center gap-1">
-          <Icon name="mdi:clock-time-eight-outline" style="color: #f79f1a" />
+          <Icon name="mdi:clock-time-eight-outline" class="text-[#f79f1a]" />
           <span>{{ data?.cookTimeMinutes }}</span>
         </div>
         <div class="flex items-center gap-1">
