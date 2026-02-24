@@ -1,6 +1,18 @@
 <script setup lang="ts">
 import { type RecipeResponse } from "../../types/types";
 const { data, error } = await useFetch<RecipeResponse>("https://dummyjson.com/recipes?limit=12");
+useSeoMeta({
+  title: 'Nuxtcipes',
+  description: 'Recipes for you to cook',
+  ogTitle:'Nuxtcipes',
+  ogDescription: 'Recipes for you to cook',
+  ogImage: '/shop.jpg',
+  ogUrl: `https://localhost:3000/recipes/${data.value?.id}`,
+  twitterTitle: 'Nuxtcipes',
+  twitterDescription: 'Recipes for you to cook',
+  twitterImage: '/shop.jpg',
+  twitterCard: 'summary'
+})
 </script>
 <template>
     <div>

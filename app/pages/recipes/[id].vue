@@ -10,6 +10,18 @@ if (error.value) {
     statusMessage: error.value?.statusMessage,
   });
 }
+useSeoMeta({
+  title: data.value?.name || 'title',
+  description: 'Recipes for you to cook',
+  ogTitle: data.value?.name || 'og:title',
+  ogDescription: 'Recipes for you to cook',
+  ogImage: data.value?.image,
+  ogUrl: `https://localhost:3000/recipes/${data.value?.id}`,
+  twitterTitle: data.value?.name || 'twitter:title',
+  twitterDescription: 'Recipes for you to cook',
+  twitterImage: data.value?.image,
+  twitterCard: 'summary'
+})
 </script>
 <template>
   <div class="flex flex-col max-w-screen-lg container py-20">
