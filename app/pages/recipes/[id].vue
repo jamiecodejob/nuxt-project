@@ -3,7 +3,7 @@ import { type Recipe } from "../../../types/types";
 const {id} = useRoute().params;
 const { data, error } = await useFetch<Recipe>(`https://dummyjson.com/recipes/${id}`
 );
-// 2. 處理 API 成功 (200) 但回傳空值的情況
+
 if (error.value) {
   throw createError({
     statusCode: error.value?.statusCode,
