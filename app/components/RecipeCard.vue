@@ -23,12 +23,7 @@ defineProps<{
                 <span>{{ recipe.rating }}</span>
             </div>
             </div>
-            <NuxtLink
-                :to="`/recipes/${recipe.id}`"
-                class="px-4 py-2 text-white self-start bg-yellow-400 rounded-md text-base lg:text-lg cursor-pointer"
-            >
-            View
-            </NuxtLink>
+            <BaseBtn :to="`/recipes/${recipe.id}`">View</BaseBtn>
         </div>
     </div>
 </template>
